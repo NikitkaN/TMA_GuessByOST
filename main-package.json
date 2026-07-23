@@ -1,0 +1,22 @@
+{
+  "name": "tma_guessbyost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitkaN/TMA_GuessByOST.git"
+  },
+  "keywords": [],
+  "workspaces": ["server", "client"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NikitkaN/TMA_GuessByOST/issues"
+  },
+  "homepage": "https://github.com/NikitkaN/TMA_GuessByOST#readme"
+}
