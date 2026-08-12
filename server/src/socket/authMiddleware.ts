@@ -1,8 +1,5 @@
-import * as path from 'path';
 import { createHmac } from 'crypto'
-import { Socket } from 'socket.io';
 import { URLSearchParams } from 'url';
-import 'dotenv/config';
 
 interface AuthResult {
     success: boolean;
@@ -31,6 +28,13 @@ export function validateInitData(initData: string, botToken: string): boolean {
 }
 
 export function handleAuth(initData: string): AuthResult {
+    if (process.env.DEV_MODE === 'true' && initData === 'dev') {
+        return { 
+          success: true, 
+          user: { id: 9999, first_name: 'DevUser', username: 'dev_player' } 
+        };
+    }
+
     const botToken = process.env.BOT_TOKEN;
     if (!botToken) return { success: false, error: 'Внутренняя ошибка сервера: BOT_TOKEN не настроен' };
 
